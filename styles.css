@@ -1,166 +1,86 @@
 /* GENERAL */
-img {
+:root {
+  /*Farge variabler*/
+  
+--primaryColor: green;
+--secondaryColor: yellow;
+--accentColor: purple;
+--textColor: pink;
+--headingColor: orange;
+--lightBackground: white;
+--darkBackground: Black;
+
+
+
+/* Størrelser variabler*/
+--smallSpace: 8px;
+--mediumSpace: 16px;
+--largeSpace: 24;
+--hugeSpace: 48px;
+--gap: 100px;
+--fullScreen: 100vh;
+
+/*Font variables*/
+--fontHeading: "Times New Roman";
+--fontPargraph: "Verdana";
+--fontSize: 18px;
+
+
+}
+
+.fiftyFifty {
   max-width: 50%;
 }
 
-section {
-  min-height: 100vh;
+.fullScreen {
+  min-height: var(--fullScreen);
 }
 
-/* HEADER */
-header {
+.flexTrueCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexSpaceBetween {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navList {
-  display: flex;
+/* HEADER */
+header {
+  background-color: var(--primaryColor);
+
+  /* display: flex;
   align-items: center;
+  justify-content: space-between; */
+}
+
+.navList {
+  /* display: flex;
+  align-items: center; */
   gap: 20px;
   list-style: none;
 }
 
 /* MAIN */
-section {
-  display: flex;
+.sectionHero {
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center; */
 }
 
 .heroIntro {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
-}
-.card {
-  max-width: 500px;
-  border: 2px solid lightgray;
-  padding: 10px;
-  border-radius: 20px;
+  justify-content: center; */
 }
 
-.slideInLeftCard {
-  background-color: #2008b7;
-  color: rgb(101, 6, 6);
-  /* Longhand */
-  animation-name: slideLeft;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+body {
+  background-color: var(--darkBackGround);
 }
-
-@keyframes slideLeft {
-  from {
-    /* Animasjon start fra */
-transform: translateX(-1000px);
-/*scale 0; */
-  }
-
-  to {
-    /* Aniasjon slutt */
-transform: translateX(0px);
-background-color: aqua;
-scale: 1.5
-  }
-}
-
-.slideInRightCard {
-  background-color: #acbea3;
-  /*Shorthand */
-  animation: slideRight 3s ease-in-out infinite forwards;
- 
-}
-
-@keyframes slideRight{
-  0% {
-    /*Animasjon start*/
-transform: translateX(1000px);
-background-color: rgb(159, 127, 255);
-
-  }
-  50% {
-    background-color: azure;
-  }
-  100%{
-    /* Animasjon slutt*/
-transform: translate(0px);
-background-color: aqua;
-  }
-}
-
-
-.rotateCard {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  background-color: #8de969;
-}
-
-/* Button transitions / knapp overgangen */
-.buttonContainer {
-  display: flex;
-  gap: 10px;
-}
-
-.button {
-  padding: 10px;
-  width: 100px;
-  border-radius: 40px;
-  border: 2px solid lightgray;
-}
-
-@media (max-width: 426px) {
-  .sectionProjects {
-    flex-direction: column;
-  }
-}
-
-.buttonColor {
-  background-color: purple;
-  /*longhand */
-transition-duration: 1s;
-transition-property: background-color;
-transition-timing-function: ease-in-out;
-transition-delay: 1ms;
-}
-
-
-.buttonColor:hover {
-background-color: orangered;
-}
-
-.buttonSize {
-  width: inherit;
-  /* shorthand*/
-  background-color: aqua;
-
-}
-
-.buttonSize:hover {
-  scale: 2;
-  transition-duration: 2s 
-
-}
-.buttonOpacity {
-  opacity: 0.5;
-
-}
-
-.buttonOpacity:hover {
-  opacity: 1;
-  /*Longhand*/
-
-  transition-duration: 2s ;
-  transition-property: opacity;
-  transition-timing-function: ease-out;
-  /* short */
-
-}
-
 
 @media (max-width: 426px) {
   img {
@@ -171,3 +91,26 @@ background-color: orangered;
     flex-direction: column;
   }
 }
+
+.sectionProjects {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.projectCard {
+  border: 2px black solid;
+  width: 300px;
+}
+
+@media (max-width: 426px) {
+  .sectionProjects {
+    flex-direction: column;
+  }
+}
+
+/* FOOTER */
+
+footer{
+  background-color: var(--primaryColor);
+  
